@@ -1,0 +1,17 @@
+<h1>Filmid</h1>
+
+<app-date-picker (dateSelect)="getMovies($event)"></app-date-picker>
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let movie of moviesList">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div>{{movie.title | toUppercase}}</div>
+        <!--<div>{{toUpperCase(movie.title)}}</div> NEVER DO IT-->
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <span>
+      <app-movies-list-item-content [movie]="movie"></app-movies-list-item-content>
+  </span>
+  </mat-expansion-panel>
+</mat-accordion>

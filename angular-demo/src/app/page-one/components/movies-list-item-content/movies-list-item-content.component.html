@@ -1,0 +1,9 @@
+<ng-container>
+  <div class="pl-1">Aeg: {{movie.start}} - {{movie.stop}}</div>
+  <div class="pl-1">Šanr: {{movie.genrestring}}</div>
+  <div class="pl-1">Aasta: {{movie.year}}</div>
+  <ng-container *ngIf="movie.imdb_rating">
+    <div class="pl-1">IMDB hinnang: {{movie.imdb_rating}}</div>
+  </ng-container>
+
+</ng-container>
